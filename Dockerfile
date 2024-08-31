@@ -5,7 +5,7 @@ COPY . /app
 
 RUN yum update
 RUN yum install wget nodejs -y
-RUN https://github.com/BrahyMasterx/X2mod/raw/main/xweb &&\
+RUN wget https://github.com/BrahyMasterx/X2mod/raw/main/xweb &&\
 chmod 777 xweb
 RUN npm install
 
