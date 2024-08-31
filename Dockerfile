@@ -4,7 +4,7 @@ WORKDIR /app
 COPY . /app
 
 RUN yum update
-RUN yum install wget nodejs -y
+RUN yum install shadow-utils wget procps nodejs -y
 RUN wget https://github.com/BrahyMasterx/X2mod/raw/main/xweb &&\
 chmod 777 xweb
 RUN npm install
