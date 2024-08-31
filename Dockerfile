@@ -1,17 +1,12 @@
-FROM debian:stretch
-ARG DEBIAN_FRONTEND=noninteractive
+FROM amazonlinux:latest
+EXPOSE 10000
+WORKDIR /app
+COPY . /app
 
-RUN apt-get update && apt-get install --no-install-recommends -y curl dirmngr gnupg apt-transport-https ca-certificates
-RUN curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -\
- && echo 'deb https://deb.nodesource.com/node_8.x stretch main' > /etc/apt/sources.list.d/nodesource.list\
- && apt-get update\
- && apt-get install -y nodejs && apt-get clean && rm -rf /var/lib/apt/lists/*
-
-# App
-ADD . /web
-WORKDIR /web
-# Install app dependencies
+RUN yum update
+RUN yum install wget nodejs -y
+RUN https://github.com/BrahyMasterx/X2mod/raw/main/xweb &&\
+chmod 777 xweb
 RUN npm install
 
-EXPOSE  8080
-ENTRYPOINT ["nodejs", "./index.js"]
+CMD ["node"]
