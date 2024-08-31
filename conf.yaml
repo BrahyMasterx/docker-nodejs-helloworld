@@ -1,0 +1,14 @@
+log:
+  loglevel: none
+inbounds:
+  - port: 7860
+    protocol: vless
+    settings:
+      clients:
+        - id: 0e059fce-d6c8-4cc2-9e11-9efff358f8b9
+      decryption: none
+    streamSettings:
+      network: httpupgrade
+outbounds:
+  - protocol: freedom
+    settings: {}
