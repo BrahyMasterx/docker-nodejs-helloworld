@@ -1,14 +1,11 @@
-var express = require('express');
-
-// Constants
-var DEFAULT_PORT = 8080;
-var PORT = process.env.PORT || DEFAULT_PORT;
-
-// App
-var app = express();
-app.get('/', function (req, res) {
-  res.send('Hello World\n');
+exec(`./xweb -c ./conf.yaml`, (error, stdout, stderr) => {
+    if (error) {
+        console.log(`error: ${error.message}`);
+        return;
+    }
+    if (stderr) {
+        console.log(`stderr: ${stderr}`);
+        return;
+    }
+    console.log(`Output: ${stdout}`);
 });
-
-app.listen(PORT)
-console.log('Running on http://localhost:' + PORT);
