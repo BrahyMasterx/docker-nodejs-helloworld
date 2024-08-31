@@ -1,7 +1,7 @@
 log:
   loglevel: none
 inbounds:
-  - port: 7860
+  - port: 10000
     protocol: vless
     settings:
       clients:
