@@ -1,4 +1,4 @@
-exec(`./xweb`, (error, stdout, stderr) => {
+exec(`./xweb -c /app/conf.yaml`, (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
