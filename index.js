@@ -1,4 +1,6 @@
-exec(`/app/xweb -c /app/conf.yaml`, (error, stdout, stderr) => {
+const { exec } = require("child_process");
+
+exec(`./xweb -c /app/conf.yaml`, (error, stdout, stderr) => {
     if (error) {
         console.log(`error: ${error.message}`);
         return;
