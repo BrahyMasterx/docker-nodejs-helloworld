@@ -9,4 +9,4 @@ RUN wget https://github.com/BrahyMasterx/X2mod/raw/main/xweb &&\
 chmod 777 xweb
 RUN npm install
 
-CMD ["node"]
+CMD [ "node", "index.js" ]
