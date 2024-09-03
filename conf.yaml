@@ -9,6 +9,8 @@ inbounds:
       decryption: none
     streamSettings:
       network: grpc
+      grpcSettings:
+        serviceName: x2
 outbounds:
   - protocol: freedom
     settings: {}
