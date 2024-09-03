@@ -8,9 +8,7 @@ inbounds:
         - id: 0e059fce-d6c8-4cc2-9e11-9efff358f8b9
       decryption: none
     streamSettings:
-      network: httpupgrade
-      httpupgradeSettings:
-        path: /lovelive
+      network: grpc
 outbounds:
   - protocol: freedom
     settings: {}
