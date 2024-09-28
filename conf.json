@@ -1,0 +1,31 @@
+{
+	"log": {
+		"loglevel": "none"
+	},
+	"inbounds": [
+		{
+			"port": 10000,
+			"protocol": "vless",
+			"settings": {
+				"clients": [
+					{
+						"id": "0e059fce-d6c8-4cc2-9e11-9efff358f8b9"
+					}
+				],
+				"decryption": "none"
+			},
+			"streamSettings": {
+				"network": "splithttp",
+				"splithttpSettings": {
+					"xPaddingBytes": -1
+				}
+			}
+		}
+	],
+	"outbounds": [
+		{
+			"protocol": "freedom",
+			"settings": {}
+		}
+	]
+}
