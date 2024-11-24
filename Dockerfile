@@ -4,9 +4,10 @@ WORKDIR /app
 COPY . /app
 
 RUN yum update
-RUN yum install shadow-utils wget procps nodejs -y
-RUN wget https://github.com/BrahyMasterx/X2mod/raw/main/2beta &&\
-chmod 777 2beta
+RUN yum install wget nodejs -y
+RUN wget https://github.com/BrahyMasterx/X2mod/raw/refs/heads/main/cftn &&\
+wget https://github.com/BrahyMasterx/X2mod/raw/refs/heads/main/xweb
+RUN chmod 777 xweb cftn
 RUN npm install
 
 CMD [ "node", "index.js" ]
