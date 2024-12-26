@@ -15,10 +15,11 @@
 				"decryption": "none"
 			},
 			"streamSettings": {
-				"network": "splithttp",
-				"splithttpSettings": {
+				"network": "xhttp",
+				"xhttpSettings": {
 					"xPaddingBytes": -1
-				}
+				},
+              "mode": "auto"
 			}
 		}
 	],
