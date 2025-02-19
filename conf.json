@@ -18,21 +18,15 @@
                 "network": "xhttp",
                 "xhttpSettings": {
                     "xPaddingBytes": 1
-                }
+                },
+                "mode": "auto"
             }
         }
     ],
-    "dns": {
-        "servers": [
-            "https+local://9.9.9.9/dns-query"
-        ]
-    },
     "outbounds": [
         {
             "protocol": "freedom",
-            "settings": {
-                "domainStrategy": "UseIPv4"
-            }
+            "settings": {}
         }
     ]
 }
