@@ -4,7 +4,7 @@
     },
     "inbounds": [
         {
-            "port": 10000,
+            "port": 7860,
             "protocol": "vless",
             "settings": {
                 "clients": [
@@ -14,11 +14,12 @@
                 ],
                 "decryption": "none"
             },
-             "streamSettings": {
+            "streamSettings": {
                 "network": "xhttp",
                 "xhttpSettings": {
                     "xPaddingBytes": 1
                 }
+            }
         }
     ],
     "dns": {
