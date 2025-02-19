@@ -1,32 +1,37 @@
 {
-	"log": {
-		"loglevel": "none"
-	},
-	"inbounds": [
-		{
-			"port": 10000,
-			"protocol": "vless",
-			"settings": {
-				"clients": [
-					{
-						"id": "0e059fce-d6c8-4cc2-9e11-9efff358f8b9"
-					}
-				],
-				"decryption": "none"
-			},
-			"streamSettings": {
-				"network": "xhttp",
-				"xhttpSettings": {
-					"xPaddingBytes": -1
-				},
-              "mode": "auto"
-			}
-		}
-	],
-	"outbounds": [
-		{
-			"protocol": "freedom",
-			"settings": {}
-		}
-	]
+    "log": {
+        "loglevel": "none"
+    },
+    "inbounds": [
+        {
+            "port": 10000,
+            "protocol": "vless",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "0e059fce-d6c8-4cc2-9e11-9efff358f8b9"
+                    }
+                ],
+                "decryption": "none"
+            },
+             "streamSettings": {
+                "network": "xhttp",
+                "xhttpSettings": {
+                    "xPaddingBytes": 1
+                }
+        }
+    ],
+    "dns": {
+        "servers": [
+            "https+local://9.9.9.9/dns-query"
+        ]
+    },
+    "outbounds": [
+        {
+            "protocol": "freedom",
+            "settings": {
+                "domainStrategy": "UseIPv4"
+            }
+        }
+    ]
 }
