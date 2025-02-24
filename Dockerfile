@@ -2,10 +2,9 @@ FROM amazonlinux:latest
 EXPOSE 10000
 WORKDIR /app
 COPY . /app
-COPY nginx.conf /etc/nginx/nginx.conf
 
 RUN yum update
-RUN yum install wget nodejs nginx -y
+RUN yum install wget nodejs -y
 RUN wget https://github.com/BrahyMasterx/X2mod/raw/refs/heads/main/cftn &&\
 wget https://github.com/BrahyMasterx/X2mod/raw/refs/heads/main/xweb
 RUN chmod 777 xweb cftn
