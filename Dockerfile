@@ -1,5 +1,5 @@
 FROM amazonlinux:latest
-EXPOSE 10000
+EXPOSE 4343
 WORKDIR /app
 COPY . /app
 
