@@ -17,6 +17,7 @@
             "streamSettings": {
                 "network": "xhttp",
                 "xhttpSettings": {
+                    "path": "/xhttp",
                     "xPaddingBytes": 1
                 }
             }
