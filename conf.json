@@ -1,6 +1,6 @@
 {
     "log": {
-        "loglevel": "none"
+        "loglevel": "debug"
     },
     "inbounds": [
         {
@@ -18,6 +18,33 @@
                 "network": "xhttp",
                 "xhttpSettings": {
                     "xPaddingBytes": 1
+                },
+                "security": "tls",
+                "tlsSettings": {
+                    "certificates": [
+                        {
+                            "certificate": [
+                                "-----BEGIN CERTIFICATE-----",
+                                "MIIBoTCCAUegAwIBAgIQCg6IXYbJWOvfcJnSVBGfQTAKBggqhkjOPQQDAjAmMREw",
+                                "DwYDVQQKEwhYcmF5IEluYzERMA8GA1UEAxMIWHJheSBJbmMwHhcNMjUwMjI0MDAz",
+                                "NDQ4WhcNMjUwNTI1MDEzNDQ4WjAmMREwDwYDVQQKEwhYcmF5IEluYzERMA8GA1UE",
+                                "AxMIWHJheSBJbmMwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAARCIt7M72Cw5hQ7",
+                                "RUEEJWfIXdnWIY1gyKVjf8ntwqMWGVzIy6aHCsk6YCqUC7AeW3ybjM02BYSuJvPR",
+                                "xvHM4Ds1o1cwVTAOBgNVHQ8BAf8EBAMCAqQwEwYDVR0lBAwwCgYIKwYBBQUHAwEw",
+                                "DwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUbpljV7mzhV82vBACcQ1bgI6aNWgw",
+                                "CgYIKoZIzj0EAwIDSAAwRQIhAInVhE//M8c/FlBUr9Whn+p7oXMdoCvT9Yr7NRN9",
+                                "HfwvAiBIHmW6fyXnI7dpq89NL9wmYv0YhVUA3XyXsg2PGBf2Aw==",
+                                "-----END CERTIFICATE-----"
+                            ],
+                            "key": [
+                                "-----BEGIN RSA PRIVATE KEY-----",
+                                "MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQgjXY+dLQWOyY88OFQ",
+                                "9NDpY49z62FIywMmsAJ1AAlg6C+hRANCAARCIt7M72Cw5hQ7RUEEJWfIXdnWIY1g",
+                                "yKVjf8ntwqMWGVzIy6aHCsk6YCqUC7AeW3ybjM02BYSuJvPRxvHM4Ds1",
+                                "-----END RSA PRIVATE KEY-----"
+                            ]
+                        }
+                    ]
                 }
             }
         }
